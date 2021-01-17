@@ -14,6 +14,12 @@
 		D900270025B48CC400E36FB2 /* Qbix3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D90026FE25B48CC400E36FB2 /* Qbix3.xcdatamodeld */; };
 		D900270225B48CC600E36FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D900270125B48CC600E36FB2 /* Assets.xcassets */; };
 		D900270525B48CC600E36FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D900270325B48CC600E36FB2 /* LaunchScreen.storyboard */; };
+		D900271425B48D3600E36FB2 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900271325B48D3600E36FB2 /* Box.swift */; };
+		D900271825B48D8B00E36FB2 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900271725B48D8B00E36FB2 /* K.swift */; };
+		D900271B25B48DD800E36FB2 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900271A25B48DD800E36FB2 /* Board.swift */; };
+		D900271E25B48E2100E36FB2 /* BoardInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900271D25B48E2100E36FB2 /* BoardInitializer.swift */; };
+		D900272125B4D15700E36FB2 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900272025B4D15700E36FB2 /* Attributes.swift */; };
+		D900272425B4D1CA00E36FB2 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D900272325B4D1CA00E36FB2 /* Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		D900270125B48CC600E36FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D900270425B48CC600E36FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D900270625B48CC600E36FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D900271325B48D3600E36FB2 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		D900271725B48D8B00E36FB2 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		D900271A25B48DD800E36FB2 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		D900271D25B48E2100E36FB2 /* BoardInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardInitializer.swift; sourceTree = "<group>"; };
+		D900272025B4D15700E36FB2 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		D900272325B4D1CA00E36FB2 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,70 @@
 		D90026F425B48CC400E36FB2 /* Qbix3 */ = {
 			isa = PBXGroup;
 			children = (
-				D90026F525B48CC400E36FB2 /* AppDelegate.swift */,
-				D90026F725B48CC400E36FB2 /* SceneDelegate.swift */,
-				D90026F925B48CC400E36FB2 /* ViewController.swift */,
-				D90026FB25B48CC400E36FB2 /* Main.storyboard */,
+				D900271225B48D1700E36FB2 /* DataModel */,
+				D900271125B48CF900E36FB2 /* Others */,
+				D900271025B48CF100E36FB2 /* Objects */,
+				D900270F25B48CE100E36FB2 /* View */,
+				D900270E25B48CD900E36FB2 /* Model */,
+				D900270D25B48CD000E36FB2 /* Controller */,
 				D900270125B48CC600E36FB2 /* Assets.xcassets */,
-				D900270325B48CC600E36FB2 /* LaunchScreen.storyboard */,
 				D900270625B48CC600E36FB2 /* Info.plist */,
-				D90026FE25B48CC400E36FB2 /* Qbix3.xcdatamodeld */,
+				D900271725B48D8B00E36FB2 /* K.swift */,
 			);
 			path = Qbix3;
+			sourceTree = "<group>";
+		};
+		D900270D25B48CD000E36FB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D90026F925B48CC400E36FB2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D900270E25B48CD900E36FB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D900271D25B48E2100E36FB2 /* BoardInitializer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D900270F25B48CE100E36FB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D90026FB25B48CC400E36FB2 /* Main.storyboard */,
+				D900270325B48CC600E36FB2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D900271025B48CF100E36FB2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D900271325B48D3600E36FB2 /* Box.swift */,
+				D900271A25B48DD800E36FB2 /* Board.swift */,
+				D900272025B4D15700E36FB2 /* Attributes.swift */,
+				D900272325B4D1CA00E36FB2 /* Modifiers.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		D900271125B48CF900E36FB2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D90026F525B48CC400E36FB2 /* AppDelegate.swift */,
+				D90026F725B48CC400E36FB2 /* SceneDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D900271225B48D1700E36FB2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D90026FE25B48CC400E36FB2 /* Qbix3.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +209,13 @@
 				D90026FA25B48CC400E36FB2 /* ViewController.swift in Sources */,
 				D900270025B48CC400E36FB2 /* Qbix3.xcdatamodeld in Sources */,
 				D90026F625B48CC400E36FB2 /* AppDelegate.swift in Sources */,
+				D900271825B48D8B00E36FB2 /* K.swift in Sources */,
+				D900272425B4D1CA00E36FB2 /* Modifiers.swift in Sources */,
+				D900271B25B48DD800E36FB2 /* Board.swift in Sources */,
 				D90026F825B48CC400E36FB2 /* SceneDelegate.swift in Sources */,
+				D900271425B48D3600E36FB2 /* Box.swift in Sources */,
+				D900272125B4D15700E36FB2 /* Attributes.swift in Sources */,
+				D900271E25B48E2100E36FB2 /* BoardInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
