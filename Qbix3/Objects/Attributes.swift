@@ -10,6 +10,6 @@ import UIKit
 struct Attributes: Equatable {
     
     var color:UIColor = .white
-    var letter:Character = "A"
+    var letter:String = "A"
     
 }

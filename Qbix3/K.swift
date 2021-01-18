@@ -20,6 +20,5 @@ struct K {
     
     struct Cells {
         static let boardCell = "BoardCell"
-        static let solutionCell = "SolutionCell"
     }
 }

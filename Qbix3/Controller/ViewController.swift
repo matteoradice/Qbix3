@@ -21,7 +21,10 @@ class ViewController: UIViewController {
         solutionCollectionView.delegate = self
         boardCollectionView.dataSource = self
         solutionCollectionView.dataSource = self
-        
+                
+        let nibCell = UINib(nibName: K.Cells.boardCell, bundle: nil)
+        boardCollectionView.register(nibCell, forCellWithReuseIdentifier: K.Cells.boardCell)
+        solutionCollectionView.register(nibCell, forCellWithReuseIdentifier: K.Cells.boardCell)
         
         boardInitializer.initializeBoard { (result) in
             if result == true {
@@ -61,18 +64,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectionManager = CollectionsManager()
         if collectionView == boardCollectionView {
-            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Cells.boardCell, for: indexPath)
-            cell = collectionManager.applyAttributes(cell: cell, row: indexPath.row, collection: .board)
+            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Cells.boardCell, for: indexPath) as! BoardCell
+            cell = collectionManager.applyAttributes(cell: cell, row: indexPath.row, collection: .board) as! BoardCell
             return cell
         } else {
-            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Cells.solutionCell, for: indexPath)
-            cell = collectionManager.applyAttributes(cell: cell, row: indexPath.row, collection: .solution)
+            var cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.Cells.boardCell, for: indexPath) as! BoardCell
+            cell = collectionManager.applyAttributes(cell: cell, row: indexPath.row, collection: .solution) as! BoardCell
             return cell
         }
     }
-    
-    
-    
+
     // Interacts with clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let clickManager = ClickManager()
