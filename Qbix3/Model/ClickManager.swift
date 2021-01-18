@@ -10,19 +10,24 @@ import UIKit
 struct ClickManager {
     
     func manageClick(box: Box) {
+    
         //1. Is it the first move?
-        if Board.gamePlay.clickedStreak == nil {
+        if Board.gamePlay.clickedStreak == nil || Board.gamePlay.clickedStreak?.count == 0 {
             //2. Is the box correct?
             if box.originalAttributes == Board.solution[0].originalAttributes {
                 box.modifiers.clicked = true
                 box.modifiers.correct = .correct
-                Board.gamePlay.clickedStreak?.append((box: box, move: 0, correct: true))
+                if (Board.gamePlay.clickedStreak?.append((box: box, move: 0, correct: true))) == nil {
+                    Board.gamePlay.clickedStreak = [(box: box, move: 0, correct: true)]
+                }
             }
             //2. Is the box incorrect?
             else {
                 box.modifiers.clicked = true
                 box.modifiers.correct = .incorrect
-                Board.gamePlay.clickedStreak?.append((box: box, move: 0, correct: false))
+                if (Board.gamePlay.clickedStreak?.append((box: box, move: 0, correct: false))) == nil {
+                    Board.gamePlay.clickedStreak = [(box: box, move: 0, correct: false)]
+                }
             }
         }
         // 1. Isn't it the first move?

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         boardCollectionView.dataSource = self
         solutionCollectionView.dataSource = self
         
+        
         boardInitializer.initializeBoard { (result) in
             if result == true {
                 boardCollectionView.reloadData()
@@ -70,13 +71,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
+    
+    
     // Interacts with clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var clickManager = ClickManager()
+        let clickManager = ClickManager()
         clickManager.manageClick(box: Board.boxes[indexPath.row])
-        print(indexPath.row)
-        print(Board.boxes[0].modifiers.clicked)
-        print(Board.boxes[15].modifiers.clicked)
     }
     
 }

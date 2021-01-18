@@ -13,5 +13,7 @@ class Board {
     static var solution = [Box]()
     static var gamePlay = GamePlay()
     
+    static var nOfColumns:Int = K.BoardSize.nOfColumns
+    static var nOfRows:Int = K.BoardSize.nOfRows
 }
 
