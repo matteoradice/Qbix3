@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Attributes {
+struct Attributes: Equatable {
     
     var color:UIColor = .white
     var letter:Character = "A"

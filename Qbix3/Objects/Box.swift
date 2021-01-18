@@ -7,8 +7,12 @@
 
 import UIKit
 
-class Box {
-
+class Box: Equatable {
+    
+    static func == (lhs: Box, rhs: Box) -> Bool {
+        return lhs.originalAttributes == rhs.originalAttributes
+    }
+    
     // Identificators of the box coordinates in the board
     var coordinates:(row: Int, column: Int) = (0,0)
     var id = 0

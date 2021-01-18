@@ -7,8 +7,16 @@
 
 import UIKit
 
-class Modifiers: Attributes {
+enum ClickStatus {
+    case notClicked
+    case correct
+    case incorrect
+}
+
+struct Modifiers {
     
     var inSolution:Bool = false
+    var clicked:Bool = false
+    var correct:ClickStatus = .notClicked
     
 }
