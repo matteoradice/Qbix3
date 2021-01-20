@@ -9,7 +9,9 @@ import UIKit
 
 struct ClickManager {
     
-    func manageClick(box: Box) {
+    typealias ControlSolution = (_ check: Bool) -> ()
+    
+    func manageClick(box: Box, controlSolution: ControlSolution) {
     
         //1. Is it the first move?
         if Board.gamePlay.clickedStreak == nil || Board.gamePlay.clickedStreak?.count == 0 {
@@ -72,6 +74,11 @@ struct ClickManager {
                 box.modifiers.correct = .notClicked
                 Board.gamePlay.clickedStreak?.removeLast()
             }
+        }
+        if let check = Board.gamePlay.clickedStreak?.last?.move {
+            if check == K.BoardSize.solutionLenght - 1 {
+                controlSolution(true)
+            } else { controlSolution(false) }
         }
     }
 }

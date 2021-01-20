@@ -77,8 +77,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     // Interacts with clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let clickManager = ClickManager()
-        clickManager.manageClick(box: Board.boxes[indexPath.row])
+        clickManager.manageClick(box: Board.boxes[indexPath.row]) { (check) in
+            if check == true {
+            print("COMPLETED")
+            } else { print("PLS CONTINUE") }
+            }
+        }
     }
     
-}
 
