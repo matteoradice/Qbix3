@@ -9,7 +9,7 @@ import UIKit
 
 struct ClickManager {
     
-    typealias ControlSolution = (_ check: Bool) -> ()
+    typealias ControlSolution = (_ check: String) -> ()
     
     func manageClick(box: Box, controlSolution: ControlSolution) {
     
@@ -75,10 +75,12 @@ struct ClickManager {
                 Board.gamePlay.clickedStreak?.removeLast()
             }
         }
+        
+        // Have you achieved the solution?
         if let check = Board.gamePlay.clickedStreak?.last?.move {
             if check == K.BoardSize.solutionLenght - 1 {
-                controlSolution(true)
-            } else { controlSolution(false) }
+                controlSolution("COMPLETED")
+            } else { controlSolution("NOT YET THERE") }
         }
     }
 }

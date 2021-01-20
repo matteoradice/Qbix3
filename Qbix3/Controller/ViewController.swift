@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var boardCollectionView: UICollectionView!
     @IBOutlet weak var solutionCollectionView: UICollectionView!
     
+    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    let itemsPerRow:CGFloat = CGFloat(K.BoardSize.nOfColumns)
+    let itemsPerColumn:CGFloat = CGFloat(K.BoardSize.nOfRows)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,17 +76,37 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             cell = collectionManager.applyAttributes(cell: cell, row: indexPath.row, collection: .solution) as! BoardCell
             return cell
         }
-    }
+ }
 
     // Interacts with clicks
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let clickManager = ClickManager()
         clickManager.manageClick(box: Board.boxes[indexPath.row]) { (check) in
-            if check == true {
-            print("COMPLETED")
-            } else { print("PLS CONTINUE") }
-            }
+            print(check)
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let horizontalWaste = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - horizontalWaste
+        let widthPerItem = availableWidth / itemsPerRow
+
+        let verticalWaste = sectionInsets.top * (itemsPerColumn + 1)
+        let availableHeight = view.frame.height - verticalWaste
+        let heightPerItem = availableHeight / itemsPerColumn
+        
+        return CGSize(width: widthPerItem, height: heightPerItem)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+        
+
+}
 

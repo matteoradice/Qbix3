@@ -5,12 +5,12 @@
 //  Created by Matteo Radice on 17/01/2021.
 //
 
-import Foundation
+import UIKit
 
 struct BoardInitializer {
     
     typealias completionHandler = (_ success: Bool) -> ()
-    
+        
     func initializeBoard(nOfRows: Int = K.BoardSize.nOfRows, nOfColumns: Int = K.BoardSize.nOfColumns, solutionLenght: Int = K.BoardSize.solutionLenght, completionHandler: completionHandler) {
         createBoard(nOfRows: nOfRows, nOfColumns: nOfColumns, solutionLenght: solutionLenght) { (result) in
             colorBoard { (result) in

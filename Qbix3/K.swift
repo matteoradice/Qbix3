@@ -9,8 +9,8 @@ import UIKit
 
 struct K {
     struct BoardSize {
-        static let nOfRows = 4
-        static let nOfColumns = 4
+        static let nOfRows = 6
+        static let nOfColumns = 6
         static let solutionLenght = 3
     }
     
