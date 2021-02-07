@@ -8,9 +8,6 @@
 import UIKit
 
 class BoardCell: UICollectionViewCell {
-
-    @IBOutlet weak var labelInCell: UILabel!
-    @IBOutlet weak var imageInCell: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

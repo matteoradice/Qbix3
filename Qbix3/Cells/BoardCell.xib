@@ -15,34 +15,9 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6p-iw-j2c">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zen-Ig-EmN">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                    </imageView>
-                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <constraints>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AtG-3N-QHE"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="trailing" secondItem="Zen-Ig-EmN" secondAttribute="trailing" id="HYE-O3-mEQ"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ugb-4g-vSg"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="top" secondItem="Zen-Ig-EmN" secondAttribute="top" id="Vf1-X2-ViH"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="kiw-qB-1am"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="bottom" secondItem="Zen-Ig-EmN" secondAttribute="bottom" id="uUe-zV-lj5"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="leading" secondItem="Zen-Ig-EmN" secondAttribute="leading" id="y7Q-pH-QcW"/>
-                <constraint firstItem="L6p-iw-j2c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yYw-wB-TCi"/>
-            </constraints>
             <size key="customSize" width="100" height="100"/>
-            <connections>
-                <outlet property="imageInCell" destination="Zen-Ig-EmN" id="AKv-Zm-Nee"/>
-                <outlet property="labelInCell" destination="L6p-iw-j2c" id="SGY-7e-LwV"/>
-            </connections>
             <point key="canvasLocation" x="247.82608695652175" y="60.267857142857139"/>
         </collectionViewCell>
     </objects>
